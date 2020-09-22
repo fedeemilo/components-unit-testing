@@ -32,3 +32,11 @@ seleccionar el componente y necesitas saber el resultado esperado.
 npm install --save-dev riteway
 
 ```
+
+### Es una buena idea separar el código en 3 bloques diferentes:
+
+- UI de los Componentes
+
+- La LÓGICA del componente
+
+- Efectos secundarios (I/O, network, disk, etc)
