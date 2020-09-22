@@ -1,4 +1,4 @@
-TIPS PARA ESCRIBIR MEJORES TEST UNITARIOS
+# TIPS PARA ESCRIBIR MEJORES TEST UNITARIOS
 
 - Favorecer a los componentes puros: dadas las mismas props, siempre renderiza
   el mismo componente. Si necesitas state de la app, podes envolver esos componentes
@@ -9,7 +9,7 @@ TIPS PARA ESCRIBIR MEJORES TEST UNITARIOS
 - Aisla efectos secundarios usando componentes contenedores.
 
 
-# PURE COMPONENT: 
+## PURE COMPONENT: 
 
 Es un componente que, dado las mismas props, siempre renderiza el mismo UI,  
 y no tiene efectos secundarios.  
