@@ -23,7 +23,7 @@ const Hello = ({ userName }) => (
 export default Hello;
 ```
 
-Este tipo de componentes es muy sencillo de testear. Se necesita una forma de  
+Este tipo de componente es muy sencillo de testear. Se necesita una forma de  
 seleccionar el componente y necesitas saber el resultado esperado.
 
 ### Recomendación para testear -> render-component de RITEway
@@ -31,6 +31,28 @@ seleccionar el componente y necesitas saber el resultado esperado.
 ```
 npm install --save-dev riteway
 
+```
+
+```
+import React from "react"
+import { describe } from 'riteway'
+import render from 'riteway/render-component'
+import match from 'riteway/match'
+
+import Hello from './Hello'
+
+describe('Hello component', async assert => {
+    const userName = 'Spiderman'
+    const $ = render(<Hello userName={userName} />)
+    const contains = match($('.gretting').html())
+
+    assert({
+        given: 'a username',
+        should: 'Render a greeting to the correct username.',
+        actual: contains(userName),
+        expected: `Hello, ${userName}`
+    })
+})
 ```
 
 ### Es una buena idea separar el código en 3 bloques diferentes:
